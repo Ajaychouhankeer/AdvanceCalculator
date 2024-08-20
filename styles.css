@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f3f3f3, #e0e0e0);
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#result {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:not(.operator):not(.clear):not(.equals) {
+    background-color: #555;
+    color: #fff;
+}
+
+.operator {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.clear {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.equals {
+    background-color: #4caf50;
+    color: #fff;
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+
+/* .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.developer-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+} */
+
+
+
+
+/* Add this at the end of your existing CSS */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f3f3f3, #e0e0e0);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.calculator {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.developer-info {
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .calculator-container {
+        max-width: 100%;
+    }
+}
